@@ -2,6 +2,7 @@ import { createReducer, on } from "@ngrx/store";
 import { decrement, increment, reset } from "./counter.actions";
 
 export const initialState = 0;
+export const selectCount = (state: { count: number }) => state.count;
 
 export const counterReducer = createReducer(
     initialState,
